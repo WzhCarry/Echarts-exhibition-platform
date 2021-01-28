@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>科技成果转化大数据服务平台</title>
+</head>
+
+<body>
+    <!-- 头部的盒子 -->
+    <header>
+        <h1>科技成果转化大数据服务平台</h1>
+        <div class="showTime"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); //開始运行
+            function time() {
+                clearTimeout(t); //清除定时器
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours(); //获取时
+                var m = dt.getMinutes(); //获取分
+                var s = dt.getSeconds(); //获取秒
+                document.querySelector(".showTime").innerHTML =
+                    "当前时间：" +
+                    y +
+                    "年" +
+                    mt +
+                    "月" +
+                    day +
+                    "-" +
+                    h +
+                    "时" +
+                    m +
+                    "分" +
+                    s +
+                    "秒";
+                t = setTimeout(time, 1000); //设定定时器，循环运行
+            }
+        </script>
+        &
+    </header>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+        <div class="column">
+
+            <!-- 左1 -->
+            <div class="panel bar">
+                <h2>科研成果</h2>
+                <div class="chart">
+                    <div class="box">
+                        <span>
+                            <ul class='items'>
+                                <li class='item'>
+                                    <div class='item-banner'>
+                                        <div class='item-header' id="l1_title1">虚拟电厂技术及应用分析</div>
+                                        <div class='item-description' id="l1_company1">北京议城共创科技</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </span>
+                        <span>
+                            <ul class='items'>
+                                <li class='item'>
+                                    <div class='item-banner'>
+                                        <div class='item-header' id="l1_title2">虚拟电厂技术及应用分析</div>
+                                        <div class='item-description' id="l1_company2">北京议城共创科技</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </span>
+                        <span><ul class='items'>
+                            <li class='item'>
+                                <div class='item-banner'>
+                                    <div class='item-header' id="l1_title3">虚拟电厂技术及应用分析</div>
+                                        <div class='item-description' id="l1_company3">北京议城共创科技</div>
+                                </div>
+                            </li>
+                        </ul></span>
+                        <span>
+                            <ul class='items'>
+                                <li class='item'>
+                                    <div class='item-banner'>
+                                        <div class='item-header' id="l1_title4">虚拟电厂技术及应用分析</div>
+                                        <div class='item-description' id="l1_company4">北京议城共创科技</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </span>
+                        <span>
+                            <ul class='items'>
+                                <li class='item'>
+                                    <div class='item-banner'>
+                                        <div class='item-header' id="l1_title5">虚拟电厂技术及应用分析</div>
+                                        <div class='item-description' id="l1_company5">北京议城共创科技</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+
+            <!-- 左2 -->
+            <div class="panel pie">
+                <h2>专利发明</h2>
+                <div id="chart1"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <!-- 左3 -->
+
+            <div class="panel line">
+                <h2>创新合作</h2>
+
+                <div id="container">
+                    <ul id="con1">
+                        <li id="l3_1"></li>
+                        <li id="l3_2"></li>
+                        <li id="l3_3"></li>
+                        <li id="l3_4"></li>
+                        <li id="l3_5"></li>
+                        <li id="l3_6"></li>
+                        <li id="l3_7"></li>
+                    </ul>
+                </div>
+
+                <div class="panel-footer"></div>
+            </div>
+
+        </div>
+        <div class="column">
+            <!-- no模块制作 -->
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li id="center_1_num"></li>
+                        <li id="center_2_num"></li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li id="center_1_name"></li>
+                        <li id="center_2_name"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li id="center_3_num"></li>
+                        <li id="center_4_num"></li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li id="center_3_name"></li>
+                        <li id="center_4_name"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图模块 -->
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chartmap"></div>
+            </div>
+        </div>
+
+
+        <div class="column">
+            <!-- 右1 -->
+            <div class="panel line2">
+                <h2>项目需求</h2>
+                <div id="demo">
+                    <div id="demo1">
+                        <table id="table1">
+                            <tr>
+                                <td id="logo"><img src="./images/r1_1.jpg" alt=""><span id="r1_1"></span></td>
+                                <td id="logo"><img src="./images/r1_2.jpg" alt=""><span id="r1_2"></span></td>
+                            </tr>
+                            <tr>
+                                <td id="logo"><img src="./images/r1_3.jpg" alt=""><span id="r1_3"></span></td>
+                                <td id="logo"><img src="./images/r1_4.jpg" alt=""><span id="r1_4"></span></td>
+                            </tr>
+                            <tr>
+                                <td id="logo"><img src="./images/r1_5.jpg" alt=""><span id="r1_5"></span></td>
+                                <td id="logo"><img src="./images/r1_6.jpg" alt=""><span id="r1_6"></span></td>
+                            </tr>
+                            <tr>
+                                <td id="logo"><img src="./images/r1_7.jpg" alt=""><span id="r1_7"></span></td>
+                                <td id="logo"><img src="./images/r1_8.jpg" alt=""><span id="r1_8"></span></td>
+                            </tr>
+                            <tr>
+                                <td id="logo"><img src="./images/r1_9.jpg" alt=""><span id="r1_9"></span></td>
+                                <td id="logo"><img src="./images/r1_10.jpg" alt=""><span id="r1_10"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="demo2"></div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+
+            <!-- 右2 -->
+            <div class="panel bar2">
+                <h2>创新需求</h2>
+                <div class="chart2">图表</div>
+            </div>
+            <!-- 右3 -->
+            <div class="panel pie2">
+                <h2>新增签约</h2>
+                <div id="container2">
+                    <div id="con2">
+                        <table>
+                            <tr>
+                                <td id="r3l_1"></td>
+                                <td id="r3r_1"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_2"></td>
+                                <td id="r3r_2"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_3"></td>
+                                <td id="r3r_3"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_4"></td>
+                                <td id="r3r_4"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_5"></td>
+                                <td id="r3r_5"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_6"></td>
+                                <td id="r3r_6"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_7"></td>
+                                <td id="r3r_7"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_8"></td>
+                                <td id="r3r_8"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_9"></td>
+                                <td id="r3r_9"></td>
+                            </tr>
+                            <tr>
+                                <td id="r3l_10"></td>
+                                <td id="r3r_10"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/china.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 声明字体*/
+
+@font-face {
+    font-family: electronicFont;
+    src: url(../font/DS-DIGIT.TTF);
+}
+
+body {
+    background: url(../images/bg.jpg) no-repeat top center;
+    line-height: 1.15;
+}
+
+header {
+    position: relative;
+    height: 1.25rem;
+    background: url(../images/head_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+header h1 {
+    font-size: 0.475rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+}
+
+header .showTime {
+    position: absolute;
+    right: 0.375rem;
+    top: 0;
+    line-height: 0.9375rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.25rem;
+}
+
+.mainbox {
+    display: flex;
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0.125rem 0.125rem 0;
+}
+
+.mainbox .column {
+    flex: 3;
+}
+
+.mainbox .column:nth-child(2) {
+    flex: 4;
+    margin: 0 0.125rem 0.1875rem;
+    overflow: hidden;
+}
+
+.mainbox .panel {
+    position: relative;
+    height: 3.875rem;
+    padding: 0 0.1875rem 0.5rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    margin-bottom: 0.1875rem;
+    background: url(../images/line\(1\).png) rgba(255, 255, 255, 0.03);
+}
+
+.mainbox .panel::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+    content: "";
+}
+
+.mainbox .panel::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-top: 2px solid #02a6b5;
+    content: "";
+}
+
+.mainbox .panel .panel-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mainbox .panel .panel-footer::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+}
+
+.mainbox .panel .panel-footer::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+    content: "";
+}
+
+.mainbox .panel h2 {
+    height: 0.6rem;
+    color: #fff;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: 0.25rem;
+    font-weight: 400;
+}
+
+.mainbox .panel h2 a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.125rem;
+}
+
+.mainbox .panel .chartmap {
+    height: 3rem;
+}
+
+.no {
+    background: rgba(101, 132, 226, 0.1);
+    padding: 0.1875rem;
+}
+
+.no .no-hd {
+    position: relative;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+}
+
+.no .no-hd::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 30px;
+    height: 10px;
+    border-top: 2px solid #02a6b5;
+    border-left: 2px solid #02a6b5;
+}
+
+.no .no-hd::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 30px;
+    height: 10px;
+    border-right: 2px solid #02a6b5;
+    border-bottom: 2px solid #02a6b5;
+}
+
+.no .no-hd ul {
+    display: flex;
+}
+
+.no .no-hd ul li {
+    position: relative;
+    flex: 1;
+    line-height: 1rem;
+    font-size: 0.875rem;
+    color: #ffeb7b;
+    text-align: center;
+    font-family: "electronicFont";
+}
+
+.no .no-hd ul li::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    right: 0;
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.no .no-bd ul {
+    display: flex;
+}
+
+.no .no-bd ul li {
+    flex: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.225rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    padding-top: 0.125rem;
+}
+
+.map {
+    position: relative;
+    height: 8rem;
+}
+
+.map .map1 {
+    width: 6.475rem;
+    height: 6.475rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/map.png);
+    background-size: 100% 100%;
+    opacity: 0.3;
+}
+
+.map .map2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8.0375rem;
+    height: 8.0375rem;
+    background: url(../images/lbx.png);
+    animation: rotate1 15s linear infinite;
+    opacity: 0.6;
+    background-size: 100% 100%;
+}
+
+.map .map3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.075rem;
+    height: 7.075rem;
+    background: url(../images/jt.png);
+    animation: rotate2 10s linear infinite;
+    opacity: 0.6;
+    background-size: 100% 100%;
+}
+
+.map .chartmap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10.125rem;
+    margin-top: -1rem;
+    margin-left: -0.125rem;
+}
+
+@keyframes rotate1 {
+    form {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    form {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+
+/* 约束屏幕尺寸 */
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 42px !important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 80px !important;
+    }
+}
+
+
+/* 左1 旋转图 */
+
+.box {
+    width: 1.5rem;
+    height: 2.1rem;
+    position: relative;
+    left: 2.65rem;
+    top: .3rem;
+    transform-style: preserve-3d;
+    animation: zpq 30s linear infinite;
+}
+
+@keyframes zpq {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+.box span {
+    width: 1.5rem;
+    height: 2.1rem;
+    position: absolute;
+    left: 0.3rem;
+    top: -0.15rem;
+    /* border: 1px solid red; */
+    /* -webkit-box-reflect: below 1px linear-gradient(rgba(255, 255, 255, 0) 14%, rgba(255, 255, 255, 1) 90%); */
+    box-shadow: 0 5px 5px #333;
+}
+
+
+/* .box span:hover {
+    transform: scale(10);
+    z-index: 9999999;
+} */
+
+.box span:nth-child(1) {
+    transform: translateZ(1.4rem);
+}
+
+.box span:nth-child(2) {
+    transform: rotateY(72deg) translateZ(1.4rem);
+}
+
+.box span:nth-child(3) {
+    transform: rotateY(144deg) translateZ(1.4rem);
+}
+
+.box span:nth-child(4) {
+    transform: rotateY(216deg) translateZ(1.4rem);
+}
+
+.box span:nth-child(5) {
+    transform: rotateY(288deg) translateZ(1.4rem);
+}
+
+.items .item {
+    width: 1.5rem;
+    height: 2.1rem;
+    list-style: none;
+    text-align: center;
+    background-image: url(../images/l1_bg.jpg);
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px 1px #e5d0b3;
+}
+
+.item-header {
+    color: #d7b88c;
+    background-color: #d7b88c;
+    font-size: 14px;
+    line-height: 16px;
+    width: 1.27rem;
+    height: auto;
+    position: relative;
+    top: .35rem;
+    left: .1rem;
+    border: 1px solid black;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #f2e8d9;
+}
+
+.item-description {
+    color: #d7b88c;
+    background-color: #d7b88c;
+    height: .1875rem;
+    width: 1.4rem;
+    font-size: 7px;
+    text-align: center;
+    position: relative;
+    /* bottom: 10px; */
+    top: .9rem;
+    left: .025rem;
+    text-shadow: 1px 1px 1px #f2e8d9, -1px -1px 3px #000;
+}
+
+
+/* 左2文字滚动 */
+
+#container {
+    width: 90%;
+    height: 90%;
+    margin: 0 0;
+    overflow: hidden;
+}
+
+#con1 {
+    list-style: none;
+    padding: 0;
+    margin-left: 0.4rem;
+}
+
+#con1 li {
+    line-height: .65rem;
+    color: white;
+    background-color: rgba(77, 81, 128, 0.5);
+    margin-top: .1rem;
+    font-size: .3rem;
+    text-align: center;
+    border: 1px solid #748699;
+    border-radius: 10%;
+}
+
+
+/* 右3 */
+
+#container2 {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-top: 0;
+}
+
+#con2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#con2 table {
+    width: 100%;
+    border-spacing: 2;
+}
+
+#con2 tr {
+    line-height: .65rem;
+    color: white;
+    background-color: rgba(77, 81, 128, 0.5);
+    font-size: .3rem;
+    text-align: center;
+}
+
+
+/* 右1 横向滚动 */
+
+#demo {
+    overflow: hidden;
+    border: 1px dashed #CCC;
+    height: 3rem;
+    width: 6.5rem;
+    text-align: center;
+}
+
+#table1 {
+    width: 6.5rem;
+}
+
+#table1 tr {
+    width: 6.5rem;
+    height: 1rem;
+}
+
+#table1 #logo {
+    width: 3.25rem;
+    /* border: 1px solid red; */
+    height: 1rem;
+    position: relative;
+    background-color: rgba(77, 81, 128, 0.4);
+}
+
+#table1 img {
+    width: 30%;
+    height: 1rem;
+    display: block;
+}
+
+#table1 span {
+    width: 70%;
+    height: 1.5rem;
+    /* border: 1px solid green; */
+    position: absolute;
+    top: 29%;
+    left: 30%;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* 左2网状图 */
+
+#chart1 {
+    /* border: 1px solid; */
+    width: auto;
+    height: 95%;
+}
+
+
+/* 右2 滚动 */
+
+.chart2 {
+    width: 5.875rem;
+    height: 3rem;
+}
+
+
+/* 左1 旋转图 */
+
+.box {
+    width: 2rem;
+    height: 1.9rem;
+    position: relative;
+    left: 2.25rem;
+    top: .6rem;
+    transform-style: preserve-3d;
+    animation: zpq 30s linear infinite;
+}
+
+@keyframes zpq {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+.box img {
+    width: 2rem;
+    height: 1.9rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* -webkit-box-reflect: below 1px linear-gradient(rgba(255, 255, 255, 0) 14%, rgba(255, 255, 255, 1) 90%); */
+    box-shadow: 0 5px 5px #333;
+}
+
+.box img:nth-child(1) {
+    transform: translateZ(1.4rem);
+}
+
+.box img:nth-child(2) {
+    transform: rotateY(72deg) translateZ(1.4rem);
+}
+
+.box img:nth-child(3) {
+    transform: rotateY(144deg) translateZ(1.4rem);
+}
+
+.box img:nth-child(4) {
+    transform: rotateY(216deg) translateZ(1.4rem);
+}
+
+.box img:nth-child(5) {
+    transform: rotateY(288deg) translateZ(1.4rem);
+}
+
+.chart3 {
+    width: 300px;
+    height: 100px;
+}
